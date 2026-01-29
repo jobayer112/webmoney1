@@ -249,70 +249,6 @@
             height: 40px;
             animation: spin 1s linear infinite;
         }
-        
-        /* ছোট ওয়েলকাম মোডাল স্টাইল */
-        .small-welcome-modal .modal-content {
-            max-width: 320px;
-            width: 90%;
-            padding: 1.5rem;
-        }
-        
-        .small-welcome-modal .welcome-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            padding: 0.75rem;
-        }
-        
-        .small-welcome-modal .welcome-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .small-welcome-modal .welcome-subtitle {
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .small-welcome-modal .feature-box {
-            padding: 0.75rem;
-            margin-bottom: 0.5rem;
-            border-radius: 12px;
-        }
-        
-        .small-welcome-modal .feature-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-        }
-        
-        .small-welcome-modal .feature-icon i {
-            width: 16px;
-            height: 16px;
-        }
-        
-        .small-welcome-modal .feature-title {
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-        
-        .small-welcome-modal .feature-desc {
-            font-size: 0.75rem;
-        }
-        
-        .small-welcome-modal .referral-box {
-            padding: 0.75rem;
-            margin: 1rem 0;
-            border-radius: 12px;
-            font-size: 0.75rem;
-        }
-        
-        .small-welcome-modal .start-btn {
-            padding: 0.75rem;
-            font-size: 1rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-        }
     </style>
 </head>
 <body class="max-w-md mx-auto">
@@ -326,67 +262,6 @@
         </div>
     </div>
 
-    <!-- Welcome Modal - ছোট সংস্করণ -->
-    <div id="welcome-modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[60] hidden p-4 small-welcome-modal">
-        <div class="card-bg modal-content relative popup-anim border border-white/10">
-            <button onclick="closeWelcomeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white transition-colors">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-            
-            <div class="text-center mb-4">
-                <div class="welcome-icon gradient-bg flex items-center justify-center mx-auto mb-3">
-                    <i data-lucide="dollar-sign" class="w-8 h-8 text-white"></i>
-                </div>
-                <h2 class="welcome-title font-bold gradient-text">Welcome to Webvisit Earn!</h2>
-                <p class="welcome-subtitle text-gray-200">Turn spare time into money!</p>
-            </div>
-            
-            <div class="space-y-2 mb-4">
-                <div class="feature-box flex items-center space-x-3 bg-white/5">
-                    <div class="feature-icon bg-green-500/20 rounded-lg flex items-center justify-center">
-                        <i data-lucide="check-circle" class="text-green-400"></i>
-                    </div>
-                    <div>
-                        <p class="feature-title">Easy Tasks</p>
-                        <p class="feature-desc text-gray-400">Just visit websites</p>
-                    </div>
-                </div>
-                
-                <div class="feature-box flex items-center space-x-3 bg-white/5">
-                    <div class="feature-icon bg-blue-500/20 rounded-lg flex items-center justify-center">
-                        <i data-lucide="users" class="text-blue-400"></i>
-                    </div>
-                    <div>
-                        <p class="feature-title">Referral Bonus</p>
-                        <p class="feature-desc text-gray-300">Earn $1 per referral</p>
-                    </div>
-                </div>
-                
-                <div class="feature-box flex items-center space-x-3 bg-white/5">
-                    <div class="feature-icon bg-purple-500/20 rounded-lg flex items-center justify-center">
-                        <i data-lucide="zap" class="text-purple-300"></i>
-                    </div>
-                    <div>
-                        <p class="feature-title">Instant Withdrawal</p>
-                        <p class="feature-desc text-gray-400">Withdraw anytime</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="referral-box text-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
-                <p class="font-bold gradient-text text-sm mb-1">Share with friends!</p>
-                <a href="https://t.me/webmoneybot_bot" target="_blank" class="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors text-xs">
-                    <i data-lucide="send" class="w-3 h-3"></i>
-                    https://t.me/webmoneybot_bot
-                </a>
-            </div>
-            
-            <button onclick="closeWelcomeModal()" class="w-full start-btn btn-accent font-bold">
-                Start Earning Now
-            </button>
-        </div>
-    </div>
-
     <!-- Auth Section -->
     <div id="auth-section" class="min-h-screen p-6 flex-col justify-center main-page">
         <div class="text-center mb-8">
@@ -394,7 +269,7 @@
                 <i data-lucide="dollar-sign" class="w-10 h-10 text-white"></i>
             </div>
             <h1 class="text-3xl font-bold mb-2 gradient-text">Webvisit Earn</h1>
-            <p class="text-gray-300">Earn Money by Visiting Websites & Watching Ads</p>
+            <p class="text-gray-400">Earn Money by Visiting Websites & Watching Ads</p>
         </div>
         
         <div id="auth-container" class="space-y-4">
@@ -887,7 +762,6 @@
         const showLogin = document.getElementById('show-login');
         const logoutBtn = document.getElementById('logout-btn');
         const navLinks = document.querySelectorAll('.nav-link');
-        const welcomeModal = document.getElementById('welcome-modal');
 
         // Initialize app
         document.addEventListener('DOMContentLoaded', function() {
@@ -903,11 +777,6 @@
             // Show loader first
             setTimeout(() => {
                 loader.style.display = 'none';
-                
-                // Check if welcome modal was shown before
-                if (!localStorage.getItem('welcomeShown')) {
-                    welcomeModal.classList.remove('hidden');
-                }
             }, 1500);
         });
 
@@ -930,14 +799,6 @@
                 
                 // Check for new notifications
                 checkNewNotifications();
-                
-                // Show welcome modal for first login
-                if (!localStorage.getItem('welcomeShown')) {
-                    setTimeout(() => {
-                        welcomeModal.classList.remove('hidden');
-                        localStorage.setItem('welcomeShown', 'true');
-                    }, 500);
-                }
             } else {
                 currentUser = null;
                 userData = null;
@@ -1084,15 +945,6 @@
             document.getElementById('alert-ok-btn').addEventListener('click', () => {
                 document.getElementById('custom-alert').classList.add('hidden');
             });
-            
-            // Welcome modal close
-            document.querySelector('#welcome-modal button').addEventListener('click', closeWelcomeModal);
-        }
-
-        // Close welcome modal
-        function closeWelcomeModal() {
-            welcomeModal.classList.add('hidden');
-            localStorage.setItem('welcomeShown', 'true');
         }
 
         // Show app
